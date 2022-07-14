@@ -2,8 +2,6 @@
 
 namespace Pentangle\LaravelQuestionnaire;
 
-use Illuminate\Database\Eloquent\Relations\MorphMany;
-use Pentangle\LaravelQuestionnaire\Models\Choice;
 use Pentangle\LaravelQuestionnaire\Models\Instance;
 use Pentangle\LaravelQuestionnaire\Models\Question;
 use Pentangle\LaravelQuestionnaire\Models\Response;

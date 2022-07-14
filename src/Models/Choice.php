@@ -8,7 +8,7 @@ use Pentangle\LaravelQuestionnaire\Enums\InputTypeEnum;
 class Choice extends Model
 {
     protected $casts = [
-        'type' => InputTypeEnum::class
+        'type' => InputTypeEnum::class,
     ];
 
     public function getImageAttribute(): ?string

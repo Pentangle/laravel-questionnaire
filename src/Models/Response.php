@@ -33,6 +33,4 @@ class Response extends Model
     {
         return $this->choice_id ? $this->choice->name : $this->value;
     }
-
-
 }

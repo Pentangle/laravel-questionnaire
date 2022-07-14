@@ -2,9 +2,9 @@
 
 namespace Pentangle\LaravelQuestionnaire;
 
+use Pentangle\LaravelQuestionnaire\Commands\LaravelQuestionnaireCommand;
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
-use Pentangle\LaravelQuestionnaire\Commands\LaravelQuestionnaireCommand;
 
 class LaravelQuestionnaireServiceProvider extends PackageServiceProvider
 {

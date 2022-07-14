@@ -34,5 +34,4 @@ class Instance extends Model
     /**
      * Accessors
      */
-
 }
