@@ -1,12 +1,12 @@
 <?php
 
-namespace VendorName\Skeleton\Commands;
+namespace Pentangle\LaravelQuestionnaire\Commands;
 
 use Illuminate\Console\Command;
 
-class SkeletonCommand extends Command
+class LaravelQuestionnaireCommand extends Command
 {
-    public $signature = 'skeleton';
+    public $signature = 'laravel-questionnaire';
 
     public $description = 'My command';
 

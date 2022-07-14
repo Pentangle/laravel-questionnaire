@@ -4,15 +4,17 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
+use Pentangle\LaravelQuestionnaire\Enums\InputTypeEnum;
+
 return new class extends Migration
 {
     public function up()
     {
-        Schema::create('migration_table_name_table', function (Blueprint $table) {
+        Schema::create('choices', function (Blueprint $table) {
             $table->id();
-
-            // add fields
-
+            $table->string('name');
+            $table->foreignId('question_id')->constrained();
+            $table->bigInteger('associated_value')->nullable();
             $table->timestamps();
         });
     }
