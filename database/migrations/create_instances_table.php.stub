@@ -9,7 +9,7 @@ return new class extends Migration
 {
     public function up()
     {
-        Schema::create('responses', function (Blueprint $table) {
+        Schema::create('instances', function (Blueprint $table) {
             $table->id();
             $table->foreignId('question_id')->constrained();
             $table->foreignId('user_id')->constrained();
@@ -17,5 +17,10 @@ return new class extends Migration
             $table->enum('type', InputTypeEnum::getValues())->default(InputTypeEnum::TEXT);
             $table->timestamps();
         });
+    }
+
+    public function down()
+    {
+        Schema::dropIfExists('instances');
     }
 };
