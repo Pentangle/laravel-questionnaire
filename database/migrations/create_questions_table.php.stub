@@ -13,7 +13,7 @@ return new class extends Migration
             $table->id();
             $table->string('name');
             $table->foreignId('questionnaire_id')->constrained();
-            $table->enum('type', InputTypeEnum::cases())->default(InputTypeEnum::TEXT);
+            $table->enum('type', InputTypeEnum::getValues())->default('text');
             $table->timestamps();
         });
     }

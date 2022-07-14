@@ -21,25 +21,25 @@ enum InputTypeEnum: string
     case IP = 'ip';
     case COLOR = 'color';
 
-    public function getValues(): array
+    public static function getValues(): array
     {
         return [
-            self::TEXT,
-            self::TEXTAREA,
-            self::RADIO,
-            self::CHECKBOX,
-            self::SELECT,
-            self::IMAGE,
-            self::FILE,
-            self::DATE,
-            self::DATETIME,
-            self::TIME,
-            self::NUMBER,
-            self::PASSWORD,
-            self::EMAIL,
-            self::URL,
-            self::IP,
-            self::COLOR,
+            self::TEXT->value,
+            self::TEXTAREA->value,
+            self::RADIO->value,
+            self::CHECKBOX->value,
+            self::SELECT->value,
+            self::IMAGE->value,
+            self::FILE->value,
+            self::DATE->value,
+            self::DATETIME->value,
+            self::TIME->value,
+            self::NUMBER->value,
+            self::PASSWORD->value,
+            self::EMAIL->value,
+            self::URL->value,
+            self::IP->value,
+            self::COLOR->value,
         ];
     }
 }

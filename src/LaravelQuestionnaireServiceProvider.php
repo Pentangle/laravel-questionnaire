@@ -24,8 +24,8 @@ class LaravelQuestionnaireServiceProvider extends PackageServiceProvider
                 'create_questionnaires_table',
                 'create_questions_table',
                 'create_choices_table',
-                'create_responses_table',
                 'create_instances_table',
+                'create_responses_table',
             ])
             ->hasCommand(LaravelQuestionnaireCommand::class);
     }
