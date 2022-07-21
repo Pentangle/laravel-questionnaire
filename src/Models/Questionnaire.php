@@ -2,12 +2,15 @@
 
 namespace Pentangle\LaravelQuestionnaire\Models;
 
+use Backpack\CRUD\app\Models\Traits\CrudTrait;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Pentangle\LaravelQuestionnaire\Database\Factories\QuestionnaireFactory;
 
+
 class Questionnaire extends Model
 {
+    use CrudTrait;
     use HasFactory;
 
     /**
