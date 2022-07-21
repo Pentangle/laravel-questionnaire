@@ -3,16 +3,18 @@
 namespace Pentangle\LaravelQuestionnaire\Database\Factories;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
-use Pentangle\LaravelQuestionnaire\Models\Questionnaire;
+use Pentangle\LaravelQuestionnaire\Models\Choice;
+use Pentangle\LaravelQuestionnaire\Models\Question;
 
-class QuestionnaireFactory extends Factory
+class ChoiceFactory extends Factory
 {
-    protected $model = Questionnaire::class;
+    protected $model = Choice::class;
 
     public function definition()
     {
         return [
             'name' => $this->faker->name,
+            'question_id' => Question::factory()->create(),
         ];
     }
 }
