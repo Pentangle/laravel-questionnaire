@@ -7,7 +7,6 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Pentangle\LaravelQuestionnaire\Database\Factories\QuestionnaireFactory;
 
-
 class Questionnaire extends Model
 {
     use CrudTrait;
