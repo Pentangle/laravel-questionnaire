@@ -42,7 +42,7 @@ class Choice extends Model
 
     public function getImageAttribute(): ?string
     {
-        return $this->image ? asset($this->image) : null;
+        return $this->attributes['image'] ?? null;
     }
 
     public function getAsStringAttribute(): string
