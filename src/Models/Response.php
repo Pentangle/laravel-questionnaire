@@ -37,7 +37,6 @@ class Response extends Model
         return $this->choice_id ? $this->choice->name : $this->value;
     }
 
-
     /**
      * Create a new factory instance for the model.
      *
