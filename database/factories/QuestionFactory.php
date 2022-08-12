@@ -16,9 +16,7 @@ class QuestionFactory extends Factory
         return [
             'name' => $this->faker->name,
             'type' => InputTypeEnum::RADIO,
-            'questionnaire_id' => Questionnaire::firstOrCreate([
-                'name' => $this->faker->name,
-            ])->id,
+            'questionnaire_id' => 1,
         ];
     }
 }
