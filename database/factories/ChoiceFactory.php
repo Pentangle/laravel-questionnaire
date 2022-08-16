@@ -14,7 +14,7 @@ class ChoiceFactory extends Factory
     {
         return [
             'name' => $this->faker->name,
-            'question_id' => Question::factory()->create()->id,
+            'question_id' => Question::factory(),
         ];
     }
 }
