@@ -35,13 +35,7 @@ class Choice extends Model implements HasMedia
         'type' => InputTypeEnum::class,
     ];
 
-    protected $fillable = [
-        'name',
-        'question_id',
-        'image',
-        'extras',
-        'associated_value',
-    ];
+    protected $guarded = ['id'];
 
     /**
      * Create a new factory instance for the model.

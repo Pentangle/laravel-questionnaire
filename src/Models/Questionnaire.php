@@ -12,9 +12,7 @@ class Questionnaire extends Model
     use CrudTrait;
     use HasFactory;
 
-    protected $fillable = [
-        'name',
-    ];
+    protected $guarded = ['id'];
 
     /**
      * Create a new factory instance for the model.
