@@ -33,6 +33,7 @@ class Choice extends Model implements HasMedia
 
     protected $casts = [
         'type' => InputTypeEnum::class,
+        'extras' => 'array',
     ];
 
     protected $fillable = [

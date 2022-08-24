@@ -2,19 +2,31 @@
 
 namespace Pentangle\LaravelQuestionnaire;
 
+use Pentangle\LaravelQuestionnaire\Models\Choice;
 use Pentangle\LaravelQuestionnaire\Models\Instance;
 use Pentangle\LaravelQuestionnaire\Models\Question;
 use Pentangle\LaravelQuestionnaire\Models\Response;
 
 trait QuestionableTrait
 {
-    public function instances()
+    public function createNewInstance(): int
     {
-        return $this->morphMany(Instance::class, 'questionable');
+        return $this->instances()->create([
+            'user_id' => auth()->id()
+        ])->id;
     }
 
-    public function respondToQuestion(Instance $instance, Question $question, Response $response)
+
+    public function instances()
     {
-        $instance->responses()->save($response);
+        return $this->morphMany(Instance::class, 'participant');
+    }
+
+    public function respondToQuestion(Instance $instance, Choice $choice = null, string $text = '')
+    {
+        $instance->responses()->create([
+            'text' => $text,
+            'choice_id' => $choice?->id ,
+        ]);
     }
 }
