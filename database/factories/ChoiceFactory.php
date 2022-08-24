@@ -15,6 +15,8 @@ class ChoiceFactory extends Factory
         return [
             'name' => $this->faker->name,
             'question_id' => Question::factory(),
+            'extras' => '[]',
+            'associated_value' => $this->faker->numberBetween(1, 100),
         ];
     }
 }

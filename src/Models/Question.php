@@ -14,12 +14,6 @@ class Question extends Model
 
     protected $guarded = ['id'];
 
-    protected $fillable = [
-        'name',
-        'questionnaire_id',
-        'type',
-    ];
-
     /**
      * Create a new factory instance for the model.
      *
