@@ -19,7 +19,7 @@ trait QuestionableTrait
         return $this->morphMany(Instance::class, 'participant');
     }
 
-    public function respondToQuestion(Instance $instance, Choice $choice = null, string $text = '')
+    public function respondToQuestion(Instance $instance = null, Choice $choice = null, string $text = '')
     {
         $instance->responses()->create([
             'text' => $text,

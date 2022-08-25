@@ -38,6 +38,10 @@ class Choice extends Model implements HasMedia
 
     protected $fillable = [
         'image',
+        'extras',
+        'name',
+        'question_id',
+        'associated_value',
     ];
 
     protected $guarded = ['id'];
