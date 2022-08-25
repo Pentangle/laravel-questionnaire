@@ -2,6 +2,7 @@
 
 namespace Pentangle\LaravelQuestionnaire\Models;
 
+use App\Models\Assessment;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Pentangle\LaravelQuestionnaire\Database\Factories\InstanceFactory;
@@ -43,6 +44,11 @@ class Instance extends Model
     public function responses(): \Illuminate\Database\Eloquent\Relations\HasMany
     {
         return $this->hasMany(Response::class);
+    }
+
+    public function assessment(): \Illuminate\Database\Eloquent\Relations\BelongsTo
+    {
+        return $this->belongsTo(Assessment::class);
     }
 
     /**
