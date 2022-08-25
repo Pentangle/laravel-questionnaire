@@ -36,6 +36,10 @@ class Choice extends Model implements HasMedia
         'extras' => 'array',
     ];
 
+    protected $fillable = [
+        'image',
+    ];
+
     protected $guarded = ['id'];
 
     /**
