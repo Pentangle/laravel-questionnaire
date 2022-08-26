@@ -24,6 +24,11 @@ class Response extends Model
         return $this->belongsTo(Instance::class);
     }
 
+    public function choice(): \Illuminate\Database\Eloquent\Relations\HasMany
+    {
+        return $this->hasMany(Choice::class);
+    }
+
     /**
      * Accessors
      */
@@ -46,4 +51,6 @@ class Response extends Model
     {
         return ResponseFactory::new();
     }
+
+
 }

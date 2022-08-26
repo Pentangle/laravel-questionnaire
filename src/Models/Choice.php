@@ -64,6 +64,12 @@ class Choice extends Model implements HasMedia
         return $this->belongsTo(Question::class);
     }
 
+    //a choice belongs to many responses
+    public function responses()
+    {
+        return $this->belongsToMany(Response::class);
+    }
+
     public function getImageAttribute()
     {
         return $this->getFirstMediaUrl('image', 'image');
