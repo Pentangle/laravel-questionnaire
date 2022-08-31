@@ -4,6 +4,7 @@ namespace Pentangle\LaravelQuestionnaire;
 
 use Pentangle\LaravelQuestionnaire\Models\Choice;
 use Pentangle\LaravelQuestionnaire\Models\Instance;
+use Pentangle\LaravelQuestionnaire\Models\Response;
 
 trait QuestionableTrait
 {
@@ -19,11 +20,11 @@ trait QuestionableTrait
         return $this->morphMany(Instance::class, 'participant');
     }
 
-    public function respondToQuestion(Instance $instance = null, Choice $choice = null, string $text = '')
+    public function respondToQuestion(Instance $instance = null, Response $response = null, Choice $choice = null, string $text = '')
     {
         $instance->responses()->create([
             'text' => $text,
-            'choice_id' => $choice?->id ,
+            'choice_id' => $choice?->id,
         ]);
     }
 }
