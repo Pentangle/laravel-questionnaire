@@ -51,6 +51,4 @@ class Response extends Model
     {
         return ResponseFactory::new();
     }
-
-
 }
