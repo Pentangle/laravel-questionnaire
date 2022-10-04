@@ -42,4 +42,26 @@ enum InputTypeEnum: string
             self::COLOR->value,
         ];
     }
+
+    public static function toArray()
+    {
+        return [
+            'text' => 'Text',
+            'textarea' => 'Textarea',
+            'radio' => 'Radio',
+            'checkbox' => 'Checkbox',
+            'select' => 'Select',
+            'image' => 'Image',
+            'file' => 'File',
+            'date' => 'Date',
+            'datetime' => 'Datetime',
+            'time' => 'Time',
+            'number' => 'Number',
+            'password' => 'Password',
+            'email' => 'Email',
+            'url' => 'Url',
+            'ip' => 'Ip',
+            'color' => 'Color',
+        ];
+    }
 }
