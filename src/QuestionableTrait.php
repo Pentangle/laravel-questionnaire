@@ -9,6 +9,11 @@ trait QuestionableTrait
 {
     public function createNewInstance(): int
     {
+        //if not logged in show error message
+        if (! auth()->check()) {
+            throw new \Exception('You must be logged in to create a new instance');
+        }
+
         return $this->instances()->create([
             'user_id' => auth()->id(),
         ])->id;
@@ -23,7 +28,7 @@ trait QuestionableTrait
     {
         $instance->responses()->create([
             'text' => $text,
-            'choice_id' => $choice?->id ,
+            'choice_id' => $choice?->id,
         ]);
     }
 }
