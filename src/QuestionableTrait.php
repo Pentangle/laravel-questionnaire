@@ -26,9 +26,18 @@ trait QuestionableTrait
 
     public function respondToQuestion(Instance $instance = null, Choice $choice = null, string $text = '')
     {
-        $instance->responses()->create([
-            'text' => $text,
-            'choice_id' => $choice?->id,
-        ]);
+        if(isset($instance)) {
+            $instance->responses()->create([
+                'text' => $text,
+                'choice_id' => $choice?->id,
+            ]);
+        } else {
+            $this->instances()->create([
+                'user_id' => auth()->id(),
+            ])->responses()->create([
+                'text' => $text,
+                'choice_id' => $choice?->id,
+            ]);
+        }
     }
 }
